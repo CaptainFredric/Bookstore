@@ -2,6 +2,12 @@
 
 A single-file, self-contained book display website.
 
+## 🤖 AI Assistant Context
+
+**NEW:** Use these files to get an AI up to speed instantly:
+- `AI_PROMPT.md` — **Complete cumulative context** for any AI platform
+- `QUICK_AI_REFERENCE.md` — Ultra-fast 30-second reference card
+
 ## Project review
 
 - `DAN_DEBUGGER_PROJECT_REVIEW.md` (build log, architecture, decisions, reusable patterns)
