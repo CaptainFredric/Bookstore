@@ -38,7 +38,7 @@ Notes:
 ## Local preview
 
 ```bash
-cd "/Users/erendiracisneros/Documents/GitHub/Bookstore"
+# Navigate to your project directory
 python3 -m http.server 8080
 ```
 
