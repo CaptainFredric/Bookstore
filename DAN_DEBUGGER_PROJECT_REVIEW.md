@@ -157,6 +157,12 @@ python3 -m http.server 8080
 Then visit:
 - `http://localhost:8080/Books.html`
 
+## Publish as a Website (from Git)
+This repo is set up for static hosting.
+
+- GitHub Pages: commit `index.html` + `.nojekyll`, then enable Pages on the `main` branch (root).
+- See `DEPLOYMENT.md` for step-by-step instructions and alternative hosts.
+
 ## How to Customize (Developer Notes)
 ### Add a book
 In `Books.html`, update `const books = [...]` and add:

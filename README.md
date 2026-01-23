@@ -6,6 +6,10 @@ A single-file, self-contained book display website.
 
 - `DAN_DEBUGGER_PROJECT_REVIEW.md` (build log, architecture, decisions, reusable patterns)
 
+## Deploy
+
+- `DEPLOYMENT.md` (GitHub Pages + other static hosts)
+
 ## Open it
 
 - Double-click `Books.html`, or
