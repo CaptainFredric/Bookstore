@@ -2,6 +2,10 @@
 
 A single-file, self-contained book display website.
 
+## Project review
+
+- `DAN_DEBUGGER_PROJECT_REVIEW.md` (build log, architecture, decisions, reusable patterns)
+
 ## Open it
 
 - Double-click `Books.html`, or
@@ -16,10 +20,13 @@ open "Books.html"
 - Sticky navbar + hero section
 - About + Collections + FAQ + Newsletter + Contact sections
 - Books grid with **search**, **genre filter**, **format filter**, and **sorting**
-- All styling and scripts are embedded (no external assets)
+- Real cover images via Open Library (ISBN)
+- Sample compare pricing layout (list vs sale)
+- Styling in `styles.css`, logic in `Books.html`
 
 ## Customize the books
 
 Edit the `books` array near the bottom of `Books.html`:
 
-- `title`, `author`, `genre`, `format`, `price`, `rating`, `year`, `featured`
+- `title`, `author`, `genre`, `format`, `isbn13`, `rating`, `year`, `featured`
+- Optional: `listPriceUsd`, `priceUsd`
