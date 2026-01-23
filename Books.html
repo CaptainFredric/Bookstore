@@ -3,12 +3,637 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore
-    </title>
+    <meta name="description" content="A modern, responsive book catalog UI with search, filters, sorting, and real cover images.">
+    <title>Bookstore | Catalog UI</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> Welcome to the Bookstore</h1>
-    
-    
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header>
+        <div class="container topbar" aria-label="Primary">
+            <a class="brand" href="#home" aria-label="Bookstore home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Bookstore</span>
+            </a>
+
+            <nav aria-label="Navigation">
+                <a class="navlink" href="#home">Home</a>
+                <a class="navlink" href="#about">About</a>
+                <a class="navlink" href="#collections">Collections</a>
+                <a class="navlink" href="#contact">Contact</a>
+                <a class="navlink" href="#books">Books</a>
+                <a class="navlink" href="#faq">FAQ</a>
+            </nav>
+
+            <div class="cta">
+                <a class="btn btn-secondary" href="#books">Explore</a>
+                <a class="btn btn-primary" href="#books">Browse books</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+        <section id="home" class="hero" aria-label="Hero">
+            <div>
+                <p class="tiny">Front-end catalog project</p>
+                <h1>Modern book catalog UI</h1>
+                <p>A responsive, accessible browsing experience with search, filtering, sorting, and ISBN cover images (built with plain HTML, CSS, and JavaScript).</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#books">Browse books</a>
+                    <a class="btn btn-secondary" href="#contact">Contact us</a>
+                </div>
+
+                <div class="badge-row" aria-label="Highlights">
+                    <span class="badge"><span class="dot" aria-hidden="true"></span> Search + filter + sort</span>
+                    <span class="badge"><span class="dot" aria-hidden="true"></span> Responsive grid</span>
+                    <span class="badge"><span class="dot" aria-hidden="true"></span> Accessible patterns</span>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <!-- Inline SVG illustration (self-contained; no external assets) -->
+                <svg class="illustration" viewBox="0 0 560 420" role="img" aria-label="Abstract bookshelf illustration">
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#7b57ff" />
+                            <stop offset="1" stop-color="#4a35d8" />
+                        </linearGradient>
+                        <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#a58bff" />
+                            <stop offset="1" stop-color="#6f4ef6" />
+                        </linearGradient>
+                        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1e124a" flood-opacity="0.18" />
+                        </filter>
+                    </defs>
+
+                    <!-- soft background shapes -->
+                    <path d="M72,276 C40,214 70,138 150,116 C232,94 260,42 332,60 C404,78 468,128 488,192 C510,260 468,334 394,356 C316,380 152,356 72,276 Z" fill="#efe9ff" />
+                    <circle cx="448" cy="112" r="54" fill="#efe9ff" opacity="0.75" />
+
+                    <!-- shelf + books -->
+                    <g filter="url(#shadow)">
+                        <rect x="110" y="302" rx="18" ry="18" width="340" height="56" fill="#ffffff" />
+                        <rect x="128" y="316" rx="12" ry="12" width="304" height="28" fill="#f6f3ff" />
+
+                        <rect x="142" y="170" rx="12" ry="12" width="66" height="132" fill="url(#g1)" />
+                        <rect x="216" y="190" rx="12" ry="12" width="58" height="112" fill="#5d43f3" />
+                        <rect x="282" y="160" rx="12" ry="12" width="70" height="142" fill="url(#g2)" />
+                        <rect x="360" y="206" rx="12" ry="12" width="52" height="96" fill="#7b57ff" />
+
+                        <!-- simple spine lines -->
+                        <path d="M158 186V286M232 206V286M302 176V286M374 222V286" stroke="#ffffff" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round" />
+                    </g>
+
+                    <!-- small tag card -->
+                    <g>
+                        <rect x="378" y="116" width="120" height="66" rx="16" fill="#ffffff" opacity="0.9" />
+                        <rect x="394" y="134" width="62" height="10" rx="5" fill="#6f4ef6" opacity="0.75" />
+                        <rect x="394" y="152" width="84" height="10" rx="5" fill="#2b224a" opacity="0.12" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section id="features" class="section" aria-label="Why choose Library">
+            <div class="section-header">
+                <div>
+                    <h2>Why this <span class="accent">catalog</span> works</h2>
+                    <p class="lead">Designed for fast scanning, clean typography, and quick browsing.</p>
+                </div>
+                <div class="tiny">Fast browsing • Clean UI</div>
+            </div>
+
+            <div class="feature-grid" aria-label="Feature list">
+                <article class="feature-card" aria-label="Easy and Quick">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Easy and quick</h3>
+                    <p>Use search, filters, and sorting to find books instantly.</p>
+                </article>
+
+                <article class="feature-card" aria-label="Big Catalog">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                            <path d="M6 4h9a3 3 0 0 1 3 3v13H9a3 3 0 0 0-3 3V4Z" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M6 19h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Plenty of books</h3>
+                    <p>Add or remove titles by editing one array in the script.</p>
+                </article>
+
+                <article class="feature-card" aria-label="Real Covers">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                            <path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M9 10h6M9 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Real cover images</h3>
+                    <p>Uses ISBN cover images (with graceful fallback if missing).</p>
+                </article>
+
+                <article class="feature-card" aria-label="Affordable">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                            <path d="M7 7a5 5 0 0 1 10 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                            <path d="M6.5 9h11A2.5 2.5 0 0 1 20 11.5v6A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-6A2.5 2.5 0 0 1 6.5 9Z" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M12 12v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                            <path d="M10.2 13.2c.2-.8 1-1.2 1.8-1.2.9 0 1.6.4 1.8 1.1.2.8-.5 1.4-1.5 1.7-.8.2-1.8.6-1.9 1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <h3>Affordable layout</h3>
+                    <p>Supports list and sale pricing for a realistic storefront look.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-label="About">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Built for browsing</div>
+                    <h2>Simple, fast, and easy to explore</h2>
+                    <p class="lead">Clear sections, readable cards, and straightforward controls that keep the focus on content.</p>
+                </div>
+                <div class="tiny">Self-contained • No dependencies</div>
+            </div>
+
+            <div class="stats" aria-label="Site stats">
+                <div class="stat"><strong id="statTitles">0</strong><span>Total titles</span></div>
+                <div class="stat"><strong id="statGenres">0</strong><span>Genres</span></div>
+                <div class="stat"><strong id="statAvg">0.0</strong><span>Avg rating</span></div>
+            </div>
+
+            <div class="split" aria-label="Key features">
+                <div class="panel">
+                    <h3 style="margin: 0 0 10px; letter-spacing: -0.02em;">What you get</h3>
+                    <ul class="checklist">
+                        <li><span class="check" aria-hidden="true"></span><span>Sticky navigation and clean hero section</span></li>
+                        <li><span class="check" aria-hidden="true"></span><span>Book grid with search, filters, and sorting</span></li>
+                        <li><span class="check" aria-hidden="true"></span><span>Accessible UI patterns (labels, focus, details/summary)</span></li>
+                        <li><span class="check" aria-hidden="true"></span><span>Static HTML/CSS/JS (easy to host)</span></li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3 style="margin: 0 0 10px; letter-spacing: -0.02em;">How to use</h3>
+                    <p style="margin: 0; color: var(--muted); font-weight: 650;">Scroll to <strong style="color: var(--text);">Books</strong> and use the controls to narrow results. The count updates automatically, and the grid stays responsive across screen sizes.</p>
+                    <div class="badge-row" style="margin-top: 14px;">
+                        <span class="badge"><span class="dot" aria-hidden="true"></span> Search by title/author</span>
+                        <span class="badge"><span class="dot" aria-hidden="true"></span> Filter by genre</span>
+                        <span class="badge"><span class="dot" aria-hidden="true"></span> Sort by rating/price</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collections" class="section" aria-label="Collections">
+            <div class="section-header">
+                <div>
+                    <h2>Collections</h2>
+                    <p class="lead">Hand-picked shelves that feel like a real library landing page.</p>
+                </div>
+                <div class="tiny">Browse, then jump into Books</div>
+            </div>
+
+            <div class="collections" aria-label="Collection cards">
+                <article class="collection" aria-label="Trending reads">
+                    <h3>Trending reads</h3>
+                    <p>Popular picks with consistently high ratings.</p>
+                    <a class="btn btn-secondary" href="#books" data-quick="top">View trending</a>
+                </article>
+                <article class="collection" aria-label="New & notable">
+                    <h3>New & notable</h3>
+                    <p>Fresh titles across fiction and non-fiction.</p>
+                    <a class="btn btn-secondary" href="#books" data-quick="new">View new</a>
+                </article>
+                <article class="collection" aria-label="Study shelf">
+                    <h3>Study shelf</h3>
+                    <p>Design, data, and programming essentials.</p>
+                    <a class="btn btn-secondary" href="#books" data-quick="study">View study shelf</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="books" class="section" aria-label="Books">
+            <div class="section-header">
+                <div>
+                    <h2>Books</h2>
+                    <p class="lead">Browse real-world example titles with ISBN cover images. Pricing below is sample data for layout purposes.</p>
+                </div>
+                <div class="tiny" aria-live="polite"><span id="bookCount">0</span> shown • <span id="bookTotal">0</span> total</div>
+            </div>
+
+            <div class="controls" aria-label="Book controls">
+                <div class="control">
+                    <label for="q">Search</label>
+                    <input id="q" type="search" placeholder="Search title or author..." autocomplete="off" />
+                </div>
+                <div class="control">
+                    <label for="genre">Genre</label>
+                    <select id="genre">
+                        <option value="">All genres</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <label for="format">Format</label>
+                    <select id="format">
+                        <option value="">All formats</option>
+                        <option>Paperback</option>
+                        <option>Hardcover</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <label for="sort">Sort</label>
+                    <select id="sort">
+                        <option value="featured">Featured</option>
+                        <option value="ratingDesc">Rating: high to low</option>
+                        <option value="priceAsc">Price: low to high</option>
+                        <option value="priceDesc">Price: high to low</option>
+                        <option value="titleAsc">Title: A to Z</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <button id="clear" class="btn ghost" type="button">Clear</button>
+                </div>
+            </div>
+
+            <div id="bookGrid" class="grid" role="list" aria-label="Book list"></div>
+            <div id="empty" class="empty" hidden>No books match your filters. Try clearing or adjusting the search.</div>
+        </section>
+
+        <section id="faq" class="section" aria-label="FAQ">
+            <div class="section-header">
+                <div>
+                    <h2>FAQ</h2>
+                    <p class="lead">Quick answers about the catalog and how it’s built.</p>
+                </div>
+                <div class="tiny">Built with HTML/CSS/JS</div>
+            </div>
+
+            <div class="faq" aria-label="Frequently asked questions">
+                <details>
+                    <summary>Is there a cart or checkout?</summary>
+                    <p>Not yet. This build focuses on browsing (search, filter, sort) and clean presentation. A cart and checkout can be added later.</p>
+                </details>
+                <details>
+                    <summary>Where do cover images come from?</summary>
+                    <p>Covers load from Open Library using ISBNs, with a clean fallback if a cover is missing.</p>
+                </details>
+                <details>
+                    <summary>Can I customize the books?</summary>
+                    <p>Yes. Update the <strong style="color: var(--text);">books</strong> array in the script (title, author, genre, format, rating, ISBN, and optional price fields).</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section" aria-label="Newsletter">
+            <div class="section-header">
+                <div>
+                    <h2>Newsletter</h2>
+                    <p class="lead">Get monthly reading lists and new arrivals.</p>
+                </div>
+                <div class="tiny">Signup flow can be wired later</div>
+            </div>
+
+            <div class="newsletter">
+                <div class="panel">
+                    <h3 style="margin: 0 0 8px; letter-spacing: -0.02em;">Stay in the loop</h3>
+                    <p style="margin: 0; color: var(--muted); font-weight: 650;">A lightweight placeholder section for a real signup flow (Mailchimp, Buttondown, etc.).</p>
+                </div>
+
+                <div class="panel">
+                    <form action="#" method="post" aria-label="Newsletter form" onsubmit="return false;">
+                        <div class="field">
+                            <label for="newsEmail">Email</label>
+                            <input id="newsEmail" name="newsEmail" type="email" autocomplete="email" placeholder="captainarmoreddude@gmail.com" />
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-label="Contact">
+            <div class="section-header">
+                <div>
+                    <h2>Contact</h2>
+                    <p class="lead">Have a question about a title or want a recommendation? Send a quick message.</p>
+                </div>
+                <div class="tiny">Add a backend to enable sending</div>
+            </div>
+
+            <form action="#" method="post" aria-label="Contact form" onsubmit="return false;">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="captainarmoreddude@gmail.com" />
+                </div>
+                <div class="field full">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what you’re looking for..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                </div>
+            </form>
+        </section>
+
+        <footer aria-label="Footer">
+            <div class="footer-row">
+                <div class="footer-brand">
+                    <div class="footer-title">
+                        <strong style="color: var(--text);">Bookstore</strong>
+                        <span class="tiny">Catalog UI</span>
+                    </div>
+                    <div class="footer-meta">
+                        <span>Built by Dan DeBugger</span>
+                        <span aria-hidden="true">•</span>
+                        <a class="footer-link" href="mailto:captainarmoreddude@gmail.com">captainarmoreddude@gmail.com</a>
+                    </div>
+                    <div class="footer-meta">
+                        <span>&copy; 2026 Aden Cisneros (Dan DeBugger). All rights reserved.</span>
+                    </div>
+                </div>
+
+                <div class="footer-links" aria-label="Footer links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#collections">Collections</a>
+                    <a href="#books">Books</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Real-world example titles.
+        // Covers: Open Library ISBN cover images.
+        // Pricing: sample list/sale prices for layout. Replace with real values if you add a data source.
+        const books = [
+            { title: "Atomic Habits", author: "James Clear", genre: "Self-Help", format: "Paperback", isbn13: "9780735211292", listPriceUsd: 24.99, priceUsd: 14.99, priceAsOf: "", rating: 4.8, year: 2018, featured: true },
+            { title: "Deep Work", author: "Cal Newport", genre: "Self-Help", format: "Paperback", isbn13: "9781455586691", listPriceUsd: 19.99, priceUsd: 13.99, priceAsOf: "", rating: 4.6, year: 2016, featured: true },
+            { title: "Can't Hurt Me", author: "David Goggins", genre: "Memoir", format: "Paperback", isbn13: "9781544512280", listPriceUsd: 21.99, priceUsd: 15.49, priceAsOf: "", rating: 4.7, year: 2018, featured: true },
+
+            { title: "Cracking the Coding Interview", author: "Gayle Laakmann McDowell", genre: "Programming", format: "Paperback", isbn13: "9780984782857", listPriceUsd: 44.99, priceUsd: 34.99, priceAsOf: "", rating: 4.7, year: 2015, featured: true },
+            { title: "Clean Code", author: "Robert C. Martin", genre: "Programming", format: "Paperback", isbn13: "9780132350884", listPriceUsd: 49.99, priceUsd: 39.99, priceAsOf: "", rating: 4.6, year: 2008, featured: false },
+            { title: "The Pragmatic Programmer", author: "Andrew Hunt & David Thomas", genre: "Programming", format: "Paperback", isbn13: "9780135957059", listPriceUsd: 54.99, priceUsd: 44.99, priceAsOf: "", rating: 4.7, year: 1999, featured: true },
+            { title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", genre: "Programming", format: "Paperback", isbn13: "9781449373320", listPriceUsd: 59.99, priceUsd: 49.99, priceAsOf: "", rating: 4.7, year: 2017, featured: false },
+
+            { title: "The Design of Everyday Things", author: "Don Norman", genre: "Design", format: "Paperback", isbn13: "9780465050659", listPriceUsd: 19.99, priceUsd: 15.99, priceAsOf: "", rating: 4.6, year: 2013, featured: false },
+            { title: "Don't Make Me Think", author: "Steve Krug", genre: "Design", format: "Paperback", isbn13: "9780321965516", listPriceUsd: 34.99, priceUsd: 27.99, priceAsOf: "", rating: 4.5, year: 2014, featured: true },
+            { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", genre: "Psychology", format: "Paperback", isbn13: "9780374533557", listPriceUsd: 20.99, priceUsd: 16.49, priceAsOf: "", rating: 4.4, year: 2011, featured: false },
+
+            { title: "Sapiens", author: "Yuval Noah Harari", genre: "History", format: "Paperback", isbn13: "9780062316097", listPriceUsd: 22.99, priceUsd: 16.99, priceAsOf: "", rating: 4.5, year: 2015, featured: false },
+            { title: "Educated", author: "Tara Westover", genre: "Memoir", format: "Paperback", isbn13: "9780399590504", listPriceUsd: 18.99, priceUsd: 14.49, priceAsOf: "", rating: 4.5, year: 2018, featured: false },
+            { title: "The Alchemist", author: "Paulo Coelho", genre: "Fiction", format: "Paperback", isbn13: "9780061122415", listPriceUsd: 17.99, priceUsd: 12.99, priceAsOf: "", rating: 4.3, year: 1993, featured: false },
+        ];
+
+        function coverGradient(index) {
+            const palettes = [
+                ["#7b57ff", "#4a35d8"],
+                ["#a58bff", "#6f4ef6"],
+                ["#5d43f3", "#7b57ff"],
+                ["#6f4ef6", "#5b3ff1"],
+            ];
+            const p = palettes[index % palettes.length];
+            return `linear-gradient(135deg, ${p[0]}, ${p[1]})`;
+        }
+
+        function initials(title) {
+            const parts = title.replace(/[^a-zA-Z0-9\s]/g, "").trim().split(/\s+/).filter(Boolean);
+            const a = parts[0]?.[0] ?? "B";
+            const b = parts[1]?.[0] ?? parts[0]?.[1] ?? "K";
+            return (a + b).toUpperCase();
+        }
+
+        function formatPrice(n) {
+            if (typeof n !== "number" || Number.isNaN(n)) return "";
+            return n.toLocaleString(undefined, { style: "currency", currency: "USD" });
+        }
+
+        function openLibraryUrlFromIsbn(isbn13) {
+            if (!isbn13) return "";
+            return `https://openlibrary.org/isbn/${encodeURIComponent(isbn13)}`;
+        }
+
+        function coverUrlFromIsbn(isbn13) {
+            if (!isbn13) return "";
+            return `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn13)}-M.jpg`;
+        }
+
+        function uniqueSorted(values) {
+            return Array.from(new Set(values)).sort((a, b) => a.localeCompare(b));
+        }
+
+        function averageRating(items) {
+            if (!items.length) return 0;
+            const sum = items.reduce((acc, b) => acc + (Number(b.rating) || 0), 0);
+            return sum / items.length;
+        }
+
+        function byFeaturedThen(sortKey) {
+            return (a, b) => {
+                if (sortKey === "featured") {
+                    const af = a.featured ? 1 : 0;
+                    const bf = b.featured ? 1 : 0;
+                    if (bf !== af) return bf - af;
+                    if (b.rating !== a.rating) return b.rating - a.rating;
+                    return a.title.localeCompare(b.title);
+                }
+                return 0;
+            };
+        }
+
+        function sortBooks(items, sortKey) {
+            const list = [...items];
+            const base = byFeaturedThen(sortKey);
+            if (sortKey === "featured") return list.sort(base);
+            if (sortKey === "ratingDesc") return list.sort((a, b) => (b.rating - a.rating) || a.title.localeCompare(b.title));
+            if (sortKey === "priceAsc") {
+                return list.sort((a, b) => {
+                    const ap = typeof a.priceUsd === "number" ? a.priceUsd : Number.POSITIVE_INFINITY;
+                    const bp = typeof b.priceUsd === "number" ? b.priceUsd : Number.POSITIVE_INFINITY;
+                    return (ap - bp) || a.title.localeCompare(b.title);
+                });
+            }
+            if (sortKey === "priceDesc") {
+                return list.sort((a, b) => {
+                    const ap = typeof a.priceUsd === "number" ? a.priceUsd : Number.NEGATIVE_INFINITY;
+                    const bp = typeof b.priceUsd === "number" ? b.priceUsd : Number.NEGATIVE_INFINITY;
+                    return (bp - ap) || a.title.localeCompare(b.title);
+                });
+            }
+            if (sortKey === "titleAsc") return list.sort((a, b) => a.title.localeCompare(b.title));
+            return list.sort(base);
+        }
+
+        function applyFilters() {
+            const q = (document.getElementById("q")?.value || "").trim().toLowerCase();
+            const genre = document.getElementById("genre")?.value || "";
+            const format = document.getElementById("format")?.value || "";
+            const sortKey = document.getElementById("sort")?.value || "featured";
+
+            let filtered = [...books];
+
+            if (q) {
+                filtered = filtered.filter((b) => {
+                    return (
+                        b.title.toLowerCase().includes(q) ||
+                        b.author.toLowerCase().includes(q)
+                    );
+                });
+            }
+            if (genre) filtered = filtered.filter((b) => b.genre === genre);
+            if (format) filtered = filtered.filter((b) => b.format === format);
+
+            filtered = sortBooks(filtered, sortKey);
+            return { filtered, sortKey };
+        }
+
+        function renderBooks() {
+            const grid = document.getElementById("bookGrid");
+            const count = document.getElementById("bookCount");
+            const total = document.getElementById("bookTotal");
+            const empty = document.getElementById("empty");
+            if (!grid || !count || !total || !empty) return;
+
+            const { filtered } = applyFilters();
+
+            grid.innerHTML = filtered
+                .map((b, i) => {
+                    const cover = coverGradient(i);
+                    const coverUrl = coverUrlFromIsbn(b.isbn13);
+                    const detailsUrl = openLibraryUrlFromIsbn(b.isbn13);
+                    const rating = `★ ${Number(b.rating).toFixed(1)}`;
+                    const listPrice = formatPrice(b.listPriceUsd);
+                    const salePrice = formatPrice(b.priceUsd);
+                    const showCompare = listPrice && salePrice && (Number(b.listPriceUsd) > Number(b.priceUsd));
+                    const priceHtml = showCompare
+                        ? `<span class=\"list-price\">${listPrice}</span> <span class=\"sale-price\">${salePrice}</span>`
+                        : (salePrice ? `<span class=\"sale-price\">${salePrice}</span>` : "<span class=\"price-varies\">Price varies</span>");
+                    const year = b.year ? String(b.year) : "";
+                    const featured = b.featured ? `<span class=\"pill\">Featured</span>` : "";
+                    const asOf = b.priceAsOf ? `<span class=\"price-note\">as of ${b.priceAsOf}</span>` : "";
+
+                    return `
+                        <a class="card" role="listitem" href="${detailsUrl || "#"}" ${detailsUrl ? "target=\"_blank\" rel=\"noopener noreferrer\"" : ""} aria-label="${b.title} by ${b.author}${detailsUrl ? ", opens details in a new tab" : ""}">
+                            <div class="card-top">
+                                <div class="cover${coverUrl ? " has-img" : ""}" style="background: ${cover};" aria-hidden="true">
+                                    ${coverUrl ? `<img class=\"cover-img\" src=\"${coverUrl}\" alt=\"Cover of ${b.title.replaceAll('"', '&quot;')}\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" onload=\"this.closest('.cover').classList.add('loaded')\" onerror=\"this.closest('.cover').classList.remove('has-img'); this.closest('.cover').classList.remove('loaded'); this.remove();\">` : ""}
+                                    <div class="cover-text">${initials(b.title)}</div>
+                                </div>
+                                <div>
+                                    <h3 class="title">${b.title}</h3>
+                                    <p class="meta">by ${b.author}${year ? ` • ${year}` : ""}</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="pill-row" aria-label="Tags">
+                                    ${featured}
+                                    <span class="pill">${b.genre}</span>
+                                    <span class="pill neutral">${b.format}</span>
+                                </div>
+                                <div class="row" aria-label="Price and rating">
+                                    <div class="price">${priceHtml}${asOf ? ` <span aria-hidden=\"true\">·</span> ${asOf}` : ""}</div>
+                                    <div class="rating">${rating}</div>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                })
+                .join("");
+
+            count.textContent = String(filtered.length);
+            total.textContent = String(books.length);
+            empty.hidden = filtered.length !== 0;
+        }
+
+        function renderStats() {
+            const titles = document.getElementById("statTitles");
+            const genres = document.getElementById("statGenres");
+            const avg = document.getElementById("statAvg");
+            if (!titles || !genres || !avg) return;
+
+            const genreCount = new Set(books.map((b) => b.genre)).size;
+            const avgRating = averageRating(books);
+            titles.textContent = String(books.length);
+            genres.textContent = String(genreCount);
+            avg.textContent = avgRating.toFixed(1);
+        }
+
+        function populateGenreOptions() {
+            const select = document.getElementById("genre");
+            if (!select) return;
+            const existing = new Set(Array.from(select.options).map((o) => o.value));
+            const allGenres = uniqueSorted(books.map((b) => b.genre));
+            allGenres.forEach((g) => {
+                if (existing.has(g)) return;
+                const opt = document.createElement("option");
+                opt.value = g;
+                opt.textContent = g;
+                select.appendChild(opt);
+            });
+        }
+
+        function bindControls() {
+            const q = document.getElementById("q");
+            const genre = document.getElementById("genre");
+            const format = document.getElementById("format");
+            const sort = document.getElementById("sort");
+            const clear = document.getElementById("clear");
+
+            const onChange = () => renderBooks();
+            q?.addEventListener("input", onChange);
+            genre?.addEventListener("change", onChange);
+            format?.addEventListener("change", onChange);
+            sort?.addEventListener("change", onChange);
+
+            clear?.addEventListener("click", () => {
+                if (q) q.value = "";
+                if (genre) genre.value = "";
+                if (format) format.value = "";
+                if (sort) sort.value = "featured";
+                renderBooks();
+                q?.focus();
+            });
+
+            // Quick collection buttons
+            document.querySelectorAll("[data-quick]").forEach((el) => {
+                el.addEventListener("click", () => {
+                    const key = el.getAttribute("data-quick");
+                    if (key === "top") {
+                        if (sort) sort.value = "ratingDesc";
+                    }
+                    if (key === "study") {
+                        if (genre) genre.value = "Programming";
+                        if (sort) sort.value = "featured";
+                    }
+                    if (key === "new") {
+                        if (sort) sort.value = "featured";
+                    }
+                    renderBooks();
+                });
+            });
+        }
+
+        populateGenreOptions();
+        renderStats();
+        bindControls();
+        renderBooks();
+    </script>
 </body>
 </html>
