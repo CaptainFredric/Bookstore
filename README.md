@@ -10,6 +10,15 @@ A single-file, self-contained book display website.
 - **`QUICK_AI_REFERENCE.md`** — Ultra-fast 30-second reference card
 - **`CHANGELOG.md`** — Project evolution and version history
 
+## 🎯 Generic Templates for Future Projects (NEW!)
+
+**Reusable templates for creating AI context in ANY project:**
+- **`UNIVERSAL_AI_CONTEXT_GUIDE.md`** — Complete guide to the template system
+- **`GENERIC_AI_PROMPT_TEMPLATE.md`** — Full context template for any project
+- **`GENERIC_QUICK_AI_REFERENCE_TEMPLATE.md`** — Quick reference template for any project
+
+These templates let you create AI-ready documentation for any future Dan DeBugger project in minutes!
+
 ## Documentation
 
 - `DAN_DEBUGGER_PROJECT_REVIEW.md` — Technical deep-dive (build log, architecture, decisions, reusable patterns)
