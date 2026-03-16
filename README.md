@@ -2,9 +2,18 @@
 
 A single-file, self-contained book display website.
 
-## Project review
+## 🤖 AI Assistant Context (NEW!)
 
-- `DAN_DEBUGGER_PROJECT_REVIEW.md` (build log, architecture, decisions, reusable patterns)
+**Use these files to get an AI up to speed instantly:**
+- **`HOW_TO_USE_AI_DOCS.md`** — Start here! Complete guide on using AI context files
+- **`AI_PROMPT.md`** — Full cumulative context for any AI platform (copy-paste ready)
+- **`QUICK_AI_REFERENCE.md`** — Ultra-fast 30-second reference card
+- **`CHANGELOG.md`** — Project evolution and version history
+
+## Documentation
+
+- `DAN_DEBUGGER_PROJECT_REVIEW.md` — Technical deep-dive (build log, architecture, decisions, reusable patterns)
+- `SESSION_NOTES_2026-01-23.md` — Latest session summary
 
 ## Deploy
 
