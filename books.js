@@ -172,5 +172,11 @@ function filterBooks(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	const filterSelect = document.querySelector("#filter");
+
+	if (filterSelect) {
+		filterSelect.addEventListener("change", filterBooks);
+	}
+
 	renderBooks();
 });
