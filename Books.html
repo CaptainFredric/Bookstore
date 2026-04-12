@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library | All Books</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+  <script defer src="books.js"></script>
 </head>
 
 <body id="books__body">
@@ -21,6 +24,25 @@
           <li><a href="#footer" class="nav__link">Contact</a></li>
           <li><a href="Books.html" class="nav__link nav__link--primary">Books</a></li>
         </ul>
+        <button class="btn__menu" onclick="openMenu()" aria-label="Open navigation menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="menu__backdrop" aria-hidden="true">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()" aria-label="Close navigation menu">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="index.html" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="Books.html" class="menu__link" onclick="closeMenu()">Books</a>
+            </li>
+            <li class="menu__list">
+              <a href="#footer" class="menu__link" onclick="closeMenu()">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </section>
@@ -33,23 +55,16 @@
             <h2 class="section__title books__header--title">
               All <span class="purple">Books</span>
             </h2>
+            <select id="filter" onchange="filterBooks(event)" aria-label="Sort books">
+              <option value="" disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH">Price, Low to High</option>
+              <option value="HIGH_TO_LOW">Price, High to Low</option>
+              <option value="RATING">Rating</option>
+            </select>
           </div>
 
           <div class="books">
-            <div class="book">
-              <figure class="book__img--wrapper">
-                <img class="book__img" src="assets/atomic habits.jpg" alt="Atomic Habits cover">
-              </figure>
-              <div class="book__title">
-                Atomic Habits
-              </div>
-              <div class="book__ratings" aria-label="4 and a half stars">
-                ★★★★½
-              </div>
-              <div class="book__price">
-                <span class="book__price--normal">$59.95</span> $14.95
-              </div>
-            </div>
+            <i class="fas fa-spinner books__loading--spinner" aria-hidden="true"></i>
           </div>
         </div>
       </div>

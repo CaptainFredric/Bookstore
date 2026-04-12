@@ -5,10 +5,12 @@ This project is a static site (HTML + CSS + vanilla JS). You can host it anywher
 ## Option A: GitHub Pages (recommended)
 
 1. Commit and push these files to GitHub:
-   - `index.html` (entrypoint)
+   - `index.html`
    - `Books.html`
    - `styles.css`
-   - `.nojekyll`
+   - `index.js`
+   - `books.js`
+   - `assets/`
 
 2. In GitHub:
    - Repo → **Settings** → **Pages**
@@ -20,7 +22,9 @@ This project is a static site (HTML + CSS + vanilla JS). You can host it anywher
    - `https://<your-username>.github.io/<repo-name>/`
 
 Notes:
-- `index.html` redirects to `Books.html` and preserves `#hash` navigation.
+
+- `index.html` is the landing page.
+- `Books.html` is the sortable catalog page.
 
 ## Option B: Netlify
 
@@ -43,5 +47,6 @@ python3 -m http.server 8080
 ```
 
 Then open:
+
 - `http://localhost:8080/`
 

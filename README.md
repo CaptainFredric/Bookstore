@@ -1,6 +1,6 @@
 # Bookstore (Library Layout)
 
-A single-file, self-contained book display website.
+A two-page tutorial-style bookstore site kept in your main GitHub repo and cleaned up to remove the duplicate local copy.
 
 ## Project review
 
@@ -12,25 +12,23 @@ A single-file, self-contained book display website.
 
 ## Open it
 
-- Double-click `Books.html`, or
+- Double-click `index.html` or `Books.html`, or
 - Run this from the project folder:
 
 ```bash
-open "Books.html"
+open "index.html"
 ```
 
 ## What’s inside
 
 - Sticky navbar + hero section
-- About + Collections + FAQ + Newsletter + Contact sections
-- Books grid with **search**, **genre filter**, **format filter**, and **sorting**
-- Real cover images via Open Library (ISBN)
-- Sample compare pricing layout (list vs sale)
-- Styling in `styles.css`, logic in `Books.html`
+- Dedicated home page and books page
+- Responsive mobile menu
+- Books grid with price and rating sorting
+- Shared styling in `styles.css`
+- Shared menu behavior in `index.js`
+- Books page rendering in `books.js`
 
 ## Customize the books
 
-Edit the `books` array near the bottom of `Books.html`:
-
-- `title`, `author`, `genre`, `format`, `isbn13`, `rating`, `year`, `featured`
-- Optional: `listPriceUsd`, `priceUsd`
+Edit the `BOOKS` array in `books.js`.
