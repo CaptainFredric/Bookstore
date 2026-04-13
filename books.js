@@ -1,7 +1,5 @@
-function renderBool log(...data:any[]):void
+function renderBool log(...data:any[]):void:
 
-
-const BOOKS = [
 	{
 		id: 1,
 		title: "Crack the Coding Interview",
