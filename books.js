@@ -1,3 +1,6 @@
+function renderBool log(...data:any[]):void
+
+
 const BOOKS = [
 	{
 		id: 1,
