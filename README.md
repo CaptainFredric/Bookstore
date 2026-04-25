@@ -2,6 +2,10 @@
 
 A two-page tutorial-style bookstore site kept in your main GitHub repo and cleaned up to remove the duplicate local copy.
 
+## For AI Agents
+
+- `AI_HANDOFF.md` (complete AI context, data model, how to modify)
+
 ## Project review
 
 - `DAN_DEBUGGER_PROJECT_REVIEW.md` (build log, architecture, decisions, reusable patterns)

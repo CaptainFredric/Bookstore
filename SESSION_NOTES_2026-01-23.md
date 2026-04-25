@@ -43,7 +43,7 @@ Update 2026-04-12:
 If you want to run it locally:
 
 ```bash
-cd "/Users/erendiracisneros/Documents/GitHub/Bookstore"
+# Navigate to your project directory
 python3 -m http.server 8080
 ```
 
