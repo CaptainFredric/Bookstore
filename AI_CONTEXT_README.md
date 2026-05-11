@@ -26,6 +26,8 @@ Perfect for: New features, refactoring, deep work, ChatGPT/Claude sessions
 
 ## 📚 All Available Files
 
+### For This Project (Bookstore)
+
 | File | Purpose | When to Use |
 |------|---------|-------------|
 | 🎓 **HOW_TO_USE_AI_DOCS.md** | Complete usage guide | **START HERE if first time** |
@@ -33,6 +35,16 @@ Perfect for: New features, refactoring, deep work, ChatGPT/Claude sessions
 | ⚡ **QUICK_AI_REFERENCE.md** | 30-second reference | Quick tasks, inline help |
 | 📊 **AI_CONTEXT_SUMMARY.md** | Visual overview | Understanding the system |
 | 📝 **CHANGELOG.md** | Version history | Track changes over time |
+
+### For Future Projects (Generic Templates) 🆕
+
+| File | Purpose | When to Use |
+|------|---------|-------------|
+| 🌍 **UNIVERSAL_AI_CONTEXT_GUIDE.md** | Complete template guide | Creating AI context for any project |
+| 📋 **GENERIC_AI_PROMPT_TEMPLATE.md** | Full context template | Template for detailed project context |
+| ⚡ **GENERIC_QUICK_AI_REFERENCE_TEMPLATE.md** | Quick reference template | Template for quick reference docs |
+| 🎯 **VISUAL_AI_GITHUB_STUDIO_GUIDE.md** | Visual AI Studio guide | Using templates with Visual AI tools |
+| 💡 **TEMPLATE_USAGE_EXAMPLES.md** | Real examples | See filled template examples |
 
 ---
 
@@ -262,6 +274,47 @@ AI Context System/
 4. Paste into ChatGPT, Claude, or your favorite AI
 5. Add your task at the end
 6. Watch the magic happen! ✨
+
+---
+
+## 🌍 Use These Templates for Your Own Projects!
+
+This repository includes **generic templates** that you can use to create AI context documentation for **any future project**!
+
+### Quick Start for New Projects
+
+1. **Copy the templates:**
+   ```bash
+   cp GENERIC_AI_PROMPT_TEMPLATE.md /your-new-project/AI_PROMPT.md
+   cp GENERIC_QUICK_AI_REFERENCE_TEMPLATE.md /your-new-project/QUICK_AI_REFERENCE.md
+   ```
+
+2. **Fill in the blanks:**
+   - Replace `[PLACEHOLDER]` values with your project details
+   - Takes 10-30 minutes depending on project size
+
+3. **Start using with AI:**
+   - Copy your filled template
+   - Paste into any AI assistant
+   - Instant project understanding!
+
+### Available Template Resources
+
+📖 **UNIVERSAL_AI_CONTEXT_GUIDE.md** - Complete guide to using templates  
+📋 **GENERIC_AI_PROMPT_TEMPLATE.md** - Full context template  
+⚡ **GENERIC_QUICK_AI_REFERENCE_TEMPLATE.md** - Quick reference template  
+🎯 **VISUAL_AI_GITHUB_STUDIO_GUIDE.md** - Guide for Visual AI GitHub Studio  
+💡 **TEMPLATE_USAGE_EXAMPLES.md** - Real-world examples  
+
+### Benefits
+
+✅ Works with **any** AI platform (ChatGPT, Claude, Copilot, Visual AI Studio)  
+✅ Saves hours of context explanation  
+✅ Consistent across your projects  
+✅ Easy to maintain and update  
+✅ Team-friendly and shareable  
+
+**See `UNIVERSAL_AI_CONTEXT_GUIDE.md` to get started!**
 
 ---
 
