@@ -160,7 +160,7 @@ Then visit:
 ## Publish as a Website (from Git)
 This repo is set up for static hosting.
 
-- GitHub Pages: commit `index.html` + `.nojekyll`, then enable Pages on the `main` branch (root).
+- GitHub Pages: commit `index.html`, `Books.html`, `styles.css`, `index.js`, `books.js`, and `assets/`, then enable Pages on the `main` branch (root).
 - See `DEPLOYMENT.md` for step-by-step instructions and alternative hosts.
 
 ## How to Customize (Developer Notes)
